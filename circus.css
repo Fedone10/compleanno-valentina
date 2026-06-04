@@ -286,15 +286,15 @@ button.ironic:active{ transform:rotate(calc(var(--caos) * -3deg)) translateY(2px
 .wa-btn{
   display:inline-block; margin-top:32px;
   font-family:var(--body); font-weight:600; font-size:clamp(14px,3.8vw,17px);
-  color:var(--paper); background:#25d366;
+  color:var(--paper); background:var(--blue);
   padding:12px 22px; border-radius:999px;
   border:2px solid var(--ink);
-  box-shadow:0 5px 0 #128c42, 0 9px 18px rgba(0,0,0,.25);
+  box-shadow:0 5px 0 var(--blue-deep), 0 9px 18px rgba(0,0,0,.25);
   text-decoration:none; transform:rotate(calc(var(--caos) * -3deg));
   transition:transform .15s, box-shadow .15s;
 }
-.wa-btn:hover{ transform:rotate(calc(var(--caos) * -3deg)) translateY(-2px); box-shadow:0 7px 0 #128c42, 0 12px 22px rgba(0,0,0,.28); }
-.wa-btn:active{ transform:rotate(calc(var(--caos) * -3deg)) translateY(2px); box-shadow:0 3px 0 #128c42, 0 6px 12px rgba(0,0,0,.25); }
+.wa-btn:hover{ transform:rotate(calc(var(--caos) * -3deg)) translateY(-2px); box-shadow:0 7px 0 var(--blue-deep), 0 12px 22px rgba(0,0,0,.28); }
+.wa-btn:active{ transform:rotate(calc(var(--caos) * -3deg)) translateY(2px); box-shadow:0 3px 0 var(--blue-deep), 0 6px 12px rgba(0,0,0,.25); }
 
 /* ---- OUTRO ---- */
 .outro .sheet{ text-align:center; }
