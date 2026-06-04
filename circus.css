@@ -281,6 +281,22 @@ button.ironic:active{ transform:rotate(calc(var(--caos) * -3deg)) translateY(2px
 .map-link{ color:inherit; text-decoration:none; border-bottom:3px dotted var(--red); padding-bottom:1px; transition:color .15s; }
 .map-link:hover{ color:var(--red-deep); border-bottom-style:solid; }
 
+/* ---- RSVP ---- */
+.rsvp .lead{ font-size:clamp(16px,4.2vw,20px); font-weight:500; max-width:34ch; margin:18px auto 0; color:#3a302b; line-height:1.5; text-wrap:pretty; }
+.wa-btn{
+  display:inline-flex; align-items:center; gap:12px; margin-top:32px;
+  font-family:var(--body); font-weight:700; font-size:clamp(15px,4vw,19px);
+  color:var(--paper); background:#25d366;
+  padding:14px 28px; border-radius:999px;
+  border:3px solid var(--ink);
+  box-shadow:0 6px 0 #128c42, 0 10px 22px rgba(0,0,0,.3);
+  text-decoration:none; transform:rotate(calc(var(--caos) * 2deg));
+  transition:transform .15s, box-shadow .15s;
+}
+.wa-btn:hover{ transform:rotate(calc(var(--caos) * 2deg)) translateY(-3px); box-shadow:0 9px 0 #128c42, 0 14px 26px rgba(0,0,0,.32); }
+.wa-btn:active{ transform:rotate(calc(var(--caos) * 2deg)) translateY(2px); box-shadow:0 3px 0 #128c42, 0 6px 12px rgba(0,0,0,.25); }
+.wa-icon{ font-size:1.4em; line-height:1; }
+
 /* ---- OUTRO ---- */
 .outro .sheet{ text-align:center; }
 .outro h2{ font-family:var(--sign); color:var(--red-deep); font-size:clamp(30px,9vw,56px); line-height:1.02; }
