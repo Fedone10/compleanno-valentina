@@ -4,6 +4,39 @@
 (function(){
   const reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
 
+  /* ---------- CORIANDOLI ---------- */
+  function launchConfetti(){
+    if(reduce) return;
+    const cvs = document.createElement('canvas');
+    cvs.style.cssText='position:fixed;inset:0;z-index:200;pointer-events:none;width:100%;height:100%';
+    document.body.appendChild(cvs);
+    const ctx = cvs.getContext('2d');
+    cvs.width = window.innerWidth; cvs.height = window.innerHeight;
+    const colors=['#d4313a','#283b9e','#f6c233','#fbf3e3','#e79aa2','#a3121f','#f0a500'];
+    const pieces = Array.from({length:130}, ()=>({
+      x: Math.random()*cvs.width, y: -20 - Math.random()*220,
+      w: 8+Math.random()*12, h: 5+Math.random()*8,
+      color: colors[Math.floor(Math.random()*colors.length)],
+      vy: 2.5+Math.random()*4, vx:(Math.random()-.5)*2.5,
+      rot:Math.random()*360, vr:(Math.random()-.5)*7, op:.75+Math.random()*.25
+    }));
+    let frame=0;
+    function draw(){
+      ctx.clearRect(0,0,cvs.width,cvs.height);
+      pieces.forEach(p=>{
+        p.y+=p.vy; p.x+=p.vx; p.rot+=p.vr;
+        if(p.y>cvs.height+20){ p.y=-20; p.x=Math.random()*cvs.width; }
+        ctx.save(); ctx.globalAlpha=p.op;
+        ctx.translate(p.x,p.y); ctx.rotate(p.rot*Math.PI/180);
+        ctx.fillStyle=p.color; ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
+        ctx.restore();
+      });
+      frame++;
+      if(frame<240) requestAnimationFrame(draw); else cvs.remove();
+    }
+    draw();
+  }
+
   /* ---------- SIPARIO ---------- */
   const stage = document.getElementById('curtainStage');
   let opened = false;
@@ -13,6 +46,7 @@
     document.body.style.overflow = '';
     startMusic();
     setTimeout(onScroll, 60);
+    setTimeout(launchConfetti, 800);
   }
   document.body.style.overflow = 'hidden';
   stage.addEventListener('click', openCurtain);
@@ -188,6 +222,29 @@
       setTimeout(()=>{ calBtn.textContent = old; }, 2600);
     });
   }
+
+  /* ---------- COUNTDOWN ---------- */
+  (function initCountdown(){
+    const target = new Date('2026-06-20T19:30:00');
+    const elD = document.getElementById('cdDays');
+    const elH = document.getElementById('cdHours');
+    const elM = document.getElementById('cdMins');
+    const elS = document.getElementById('cdSecs');
+    if(!elD) return;
+    function tick(){
+      const diff = target - new Date();
+      if(diff <= 0){
+        elD.textContent = '0'; elH.textContent = '00';
+        elM.textContent = '00'; elS.textContent = '🎪';
+        return;
+      }
+      elD.textContent = Math.floor(diff/86400000);
+      elH.textContent = String(Math.floor((diff%86400000)/3600000)).padStart(2,'0');
+      elM.textContent = String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+      elS.textContent = String(Math.floor((diff%60000)/1000)).padStart(2,'0');
+    }
+    tick(); setInterval(tick, 1000);
+  })();
 
   /* ---------- HOOK PER I TWEAKS ---------- */
   window.__applyCircusTweaks = function(t){

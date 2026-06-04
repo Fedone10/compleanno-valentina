@@ -151,6 +151,24 @@
       </div>
     </section>
 
+    <!-- ====================  COUNTDOWN  ==================== -->
+    <section class="section countdown-sec" data-screen-label="countdown">
+      <div class="sheet">
+        <div class="sheet-body">
+          <div class="head">
+            <span class="eyebrow">manca poco</span>
+            <h2>conto alla rovescia</h2>
+          </div>
+          <div class="countdown-grid">
+            <div class="cd-unit"><span class="cd-num" id="cdDays">--</span><span class="cd-lbl">giorni</span></div>
+            <div class="cd-unit"><span class="cd-num" id="cdHours">--</span><span class="cd-lbl">ore</span></div>
+            <div class="cd-unit"><span class="cd-num" id="cdMins">--</span><span class="cd-lbl">minuti</span></div>
+            <div class="cd-unit"><span class="cd-num" id="cdSecs">--</span><span class="cd-lbl">secondi</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ====================  RSVP  ==================== -->
     <section class="section rsvp" data-screen-label="rsvp">
       <div class="sheet">
@@ -182,7 +200,9 @@
 
   <!-- musica di sottofondo -->
   <div id="ytHolder" aria-hidden="true"></div>
-  <button id="musicToggle" class="music-toggle off" aria-label="musica on/off" title="musica">♪</button>
+  <button id="musicToggle" class="music-toggle off" aria-label="musica on/off" title="musica">
+    <span class="bars"><span></span><span></span><span></span></span>
+  </button>
 
   <script src="circus.js"></script>
 </body>
