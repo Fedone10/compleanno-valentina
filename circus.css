@@ -290,11 +290,11 @@ button.ironic:active{ transform:rotate(calc(var(--caos) * -3deg)) translateY(2px
 
 /* ---- COUNTDOWN ---- */
 .countdown-sec .sheet{ text-align:center; }
-.countdown-grid{ display:flex; justify-content:center; gap:clamp(10px,3vw,20px); margin-top:clamp(22px,5vw,34px); flex-wrap:wrap; }
+.countdown-grid{ display:flex; justify-content:center; gap:clamp(6px,2vw,20px); margin-top:clamp(22px,5vw,34px); flex-wrap:nowrap; }
 .cd-unit{ display:flex; flex-direction:column; align-items:center;
   background:var(--cream); border:3px solid var(--ink); border-radius:14px;
-  padding:clamp(12px,3.5vw,20px) clamp(14px,4vw,28px);
-  box-shadow:5px 5px 0 var(--ink); min-width:clamp(60px,16vw,84px);
+  padding:clamp(10px,2.5vw,20px) clamp(8px,2.5vw,28px);
+  box-shadow:5px 5px 0 var(--ink); min-width:0; flex:1; max-width:120px;
   transition:transform .2s, box-shadow .2s; }
 .cd-unit:hover{ transform:translateY(-4px); box-shadow:5px 9px 0 var(--ink); }
 .cd-unit:nth-child(odd){ transform:rotate(calc(var(--caos) * -2deg)); }
@@ -359,8 +359,8 @@ button.ironic:active{ transform:rotate(calc(var(--caos) * -3deg)) translateY(2px
   .card .meta{ text-align:center; }
   .card .pip.tl{ top:7px; left:9px; }
   .card .pip.br{ bottom:7px; right:9px; }
-  .countdown-grid{ gap:8px; }
-  .cd-unit{ padding:10px 12px; min-width:56px; }
+  .countdown-grid{ gap:6px; }
+  .cd-unit{ padding:8px 6px; }
   .sheet{ padding:clamp(24px,7vw,48px) clamp(18px,5vw,40px); }
 }
 
