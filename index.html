@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Amazing Digital Circus — sei invitat*</title>
+<link rel="stylesheet" href="circus.css">
+</head>
+<body>
+
+  <div class="backdrop"></div>
+
+  <!-- ====================  SIPARIO  ==================== -->
+  <div class="curtain-stage" id="curtainStage">
+    <div class="valance"></div>
+    <div class="curtain left"></div>
+    <div class="curtain right"></div>
+    <div class="enter">
+      <div class="ticket">
+        <span class="k">biglietto n° 001</span>
+        <span class="big">apri il sipario</span>
+      </div>
+      <span class="hint">tocca per entrare nel tendone</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ====================  HERO  ==================== -->
+    <section class="section hero" data-screen-label="hero">
+      <div class="sunburst"></div>
+      <div class="glow"></div>
+      <div class="hero-core">
+        <div class="marquee">
+          <div class="marquee-frame"></div>
+          <div class="marquee-inner">
+            <span class="kicker">sei invitat*</span>
+            <span class="t-amazing">the amazing</span>
+            <span class="t-digital">Digital<br>Circus</span>
+            <span class="t-party">party</span>
+            <span class="ribbon">20 · 06 · 2026</span>
+          </div>
+        </div>
+      </div>
+      <div class="cue">scorri ↓</div>
+    </section>
+
+    <!-- ====================  INVITO  ==================== -->
+    <section class="section invito" data-screen-label="invito">
+      <div class="sheet">
+        <div class="sheet-body">
+          <span class="eyebrow">è ufficiale · sei sulla lista</span>
+          <h2><em>Ti aspettiamo al tendone</em></h2>
+          <p class="lead">Lascia la realtà al guardaroba. Per una notte sola il tendone apre le sue tende su un mondo tra <b>sogno, teatro</b> e <b>carte da gioco incantate</b>.</p>
+          <button type="button" class="ironic" id="calBtn" data-om-id="3e7656c5:40">✦ salva la data nel calendario</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================  INSPO  ==================== -->
+    <section class="section inspo" data-screen-label="inspo">
+      <div class="sheet">
+        <div class="sheet-body">
+          <div class="head">
+            <span class="eyebrow">il mood</span>
+            <h2>circus core</h2>
+          </div>
+          <p class="intro">Pagliacci, giullari, acrobati e bamboline meccaniche. Tieni questo collage come <b>bussola</b> per la serata.</p>
+          <div class="photo tilt-l" style="max-width:440px;">
+            <span class="tape"></span>
+            <img src="images/inspo.jpeg" alt="Inspo collage circus core" loading="lazy">
+            <span class="cap">inspo collage ✦ circus core</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================  DRESS CODE  ==================== -->
+    <section class="section dresscode" data-screen-label="dresscode">
+      <div class="sheet">
+        <div class="sheet-body">
+          <div class="head">
+            <span class="eyebrow">vestiti da sogno</span>
+            <h2>dress code</h2>
+          </div>
+          <p class="intro">Il tema è ispirato a <b>“The Amazing Digital Circus”</b> ma si apre a tutti i personaggi del circo tradizionale: sogno, teatro, giullari, clown eleganti e figure uscite da un mazzo di carte incantato.</p>
+          <ul class="dc-list">
+            <li>pagliacci poetici</li>
+            <li>giullari rinascimentali</li>
+            <li>danzatrici e acrobati</li>
+            <li>re e regine delle carte da gioco</li>
+            <li>bamboline meccaniche</li>
+            <li>pulcinelle e arlecchini (w napoli)</li>
+            <li>artisti di un circo magico e surreale</li>
+          </ul>
+          <div class="gallery two" style="margin-top:clamp(30px,7vw,46px);">
+            <div class="photo tilt-l">
+              <span class="tape"></span>
+              <img src="images/dresscode-tema-crop.jpeg" alt="Costumi — giullare, re di picche, coniglio bianco" loading="lazy">
+              <span class="cap">i costumi</span>
+            </div>
+            <div class="photo tilt-r">
+              <span class="tape"></span>
+              <img src="images/dresscode-lista-crop.jpeg" alt="Ispirazioni trucco da circo" loading="lazy">
+              <span class="cap">il trucco</span>
+            </div>
+          </div>
+          <p class="dc-note">*non devi essere perfett* o overdressed, a meno che tu non lo voglia: anche solo qualche accessorio, un po' di colore — quanto basta per sentirti a tuo agio!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================  DETTAGLI / NUMERI  ==================== -->
+    <section class="section dettagli" data-screen-label="dettagli">
+      <div class="sheet">
+        <div class="sheet-body">
+          <div class="head">
+            <span class="eyebrow">i numeri della serata</span>
+            <h2>Dove &amp; quando</h2>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <span class="pip tl">♦</span><span class="pip br">♦</span>
+              <div class="suit">♦</div>
+              <div class="meta">
+                <div class="lbl">il giorno</div>
+                <div class="val">20 Giugno 2026</div>
+                <div class="sub">un sabato fuori dal tempo</div>
+              </div>
+            </div>
+            <div class="card">
+              <span class="pip tl">♥</span><span class="pip br">♥</span>
+              <div class="suit">♥</div>
+              <div class="meta">
+                <div class="lbl">il sipario si alza</div>
+                <div class="val">Ore 19:30</div>
+                <div class="sub">arriva prima che spengano le luci</div>
+              </div>
+            </div>
+            <div class="card">
+              <span class="pip tl">★</span><span class="pip br">★</span>
+              <div class="suit">★</div>
+              <div class="meta">
+                <div class="lbl">il tendone</div>
+                <div class="val"><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Via+Podgora+33+Prato" target="_blank" rel="noopener">Via Podgora 33</a></div>
+                <div class="sub">Prato · segui le stelle</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================  OUTRO  ==================== -->
+    <section class="section outro" data-screen-label="outro">
+      <div class="sheet">
+        <div class="sheet-body">
+          <h2>il numero principale <span>sei tu</span></h2>
+          <p>Ci vediamo sotto il tendone, bellezza.</p>
+          <div class="fine"><span>obbligatorio divertirsi</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- musica di sottofondo -->
+  <div id="ytHolder" aria-hidden="true"></div>
+  <button id="musicToggle" class="music-toggle off" aria-label="musica on/off" title="musica">♪</button>
+
+  <script src="circus.js"></script>
+</body>
+</html>
